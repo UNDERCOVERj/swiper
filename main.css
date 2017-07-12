@@ -2,7 +2,7 @@
 * @Author: junjie.le
 * @Date:   2017-07-11 19:53:33
 * @Last Modified by:   junjie.le
-* @Last Modified time: 2017-07-12 20:00:20
+* @Last Modified time: 2017-07-12 20:19:15
 */
 *{
 	margin: 0;
@@ -68,19 +68,19 @@ html, body{
 .right-nav-info+.right-nav-info{
 	margin: 0 5px;
 }
-.swiper{
+.carousel{
 	width: 100%;
 	position: relative;
 	overflow: hidden;
 }
-.swiper-content-wrapper-transition{
+.carousel-content-wrapper-transition{
 	transition: left .6s ease-in-out;
 }
-.swiper-content-wrapper{
+.carousel-content-wrapper{
 	left: 0;
 	position: absolute;
 }
-.swiper-img{
+.carousel-img{
 	float: left;
 	height: auto;
 }
@@ -124,17 +124,17 @@ html, body{
 	border-left: none;
 	transform: rotate(-45deg);
 }
-.swiper-dot{
+.carousel-dot{
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 100%;
 	text-align: center;
 }
-.swiper-dot-bg{
+.carousel-dot-bg{
 	background: #eee;
 }
-.swiper-dot-li{
+.carousel-dot-li{
 	width: 15px;
 	height: 15px;
 	margin: 10px 3px;
