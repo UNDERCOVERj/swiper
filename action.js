@@ -2,7 +2,7 @@
 * @Author: junjie.le
 * @Date:   2017-07-12 18:03:10
 * @Last Modified by:   junjie.le
-* @Last Modified time: 2017-07-12 20:19:42
+* @Last Modified time: 2017-07-12 20:40:40
 */
 
 'use strict';
@@ -29,7 +29,7 @@ Carousel.prototype = {
     },
     computeBodyWidth() {//计算窗口宽度
         if(document.body) {
-            return document.body.clientWidth
+            return document.body.clientWidth;
         }else {
 
             return document.documentElement.clientWidth;
