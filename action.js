@@ -2,7 +2,7 @@
 * @Author: junjie.le
 * @Date:   2017-07-12 18:03:10
 * @Last Modified by:   junjie.le
-* @Last Modified time: 2017-07-13 12:31:07
+* @Last Modified time: 2017-07-13 12:33:47
 */
 
 'use strict';
@@ -184,25 +184,6 @@ Carousel.prototype = {
         }
     }
 }
-/*var srcArr = [
-    "./img/chuzuchenew1.jpg",
-    "./img/shunfengche2.jpg",
-    "./img/zhuanchenew3.jpg"
-],pArr = [];
-srcArr.forEach((e, index) => {
-    pArr[index] = new Promise((resolve, reject) => {
-        var img = new Image();
-        img.src = e;
-        img.onload = resolve;
-    })
-})
-Promise.all(pArr).then(() => {
-    document.querySelector('.carousel-show').style.display = 'none';
-    document.querySelector('.carousel').style.display = 'block';
-    var carousel = new Carousel(3);
-})*/
-//document.querySelector('.carousel-show').style.display = 'none';
-    //document.querySelector('.carousel').style.display = 'block';
 new Promise((resolve, reject) => {
     var img = new Image();
     img.src = "./img/chuzuchenew1.jpg";
