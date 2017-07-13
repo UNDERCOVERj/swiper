@@ -2,7 +2,7 @@
 * @Author: junjie.le
 * @Date:   2017-07-12 18:03:10
 * @Last Modified by:   junjie.le
-* @Last Modified time: 2017-07-13 12:27:27
+* @Last Modified time: 2017-07-13 12:31:07
 */
 
 'use strict';
@@ -203,4 +203,12 @@ Promise.all(pArr).then(() => {
 })*/
 //document.querySelector('.carousel-show').style.display = 'none';
     //document.querySelector('.carousel').style.display = 'block';
+new Promise((resolve, reject) => {
+    var img = new Image();
+    img.src = "./img/chuzuchenew1.jpg";
+    img.onload = resolve;
+}).then(() => {
+    document.querySelector('.carousel-show').style.display = 'none';
+    document.querySelector('.carousel').style.display = 'block';
     var carousel = new Carousel(3);
+})
