@@ -2,7 +2,7 @@
 * @Author: junjie.le
 * @Date:   2017-07-12 18:03:10
 * @Last Modified by:   junjie.le
-* @Last Modified time: 2017-07-13 12:14:10
+* @Last Modified time: 2017-07-13 12:20:23
 */
 
 'use strict';
@@ -199,5 +199,7 @@ srcArr.forEach((e, index) => {
     })
 })
 Promise.all(pArr).then(() => {
-    var carousel = new Carousel(3)
+    document.querySelector('.carousel-show').style.display = 'none';
+    document.querySelector('.carousel').style.display = 'block';
+    var carousel = new Carousel(3);
 })
