@@ -2,7 +2,7 @@
 * @Author: junjie.le
 * @Date:   2017-07-12 18:03:10
 * @Last Modified by:   junjie.le
-* @Last Modified time: 2017-07-13 09:44:40
+* @Last Modified time: 2017-07-13 12:14:10
 */
 
 'use strict';
@@ -185,4 +185,19 @@ Carousel.prototype = {
     }
 }
 
-var carousel = new Carousel(3)
+
+var srcArr = [
+    "./img/zhuanchenew3.jpg",
+    "./img/shunfengche2.jpg",
+    "./img/zhuanchenew3.jpg"
+],pArr = [];
+srcArr.forEach((e, index) => {
+    pArr[index] = new Promise((resolve, reject) => {
+        var img = new Image();
+        img.src = e;
+        img.onload = resolve;
+    })
+})
+Promise.all(pArr).then(() => {
+    var carousel = new Carousel(3)
+})
