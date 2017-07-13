@@ -2,7 +2,7 @@
 * @Author: junjie.le
 * @Date:   2017-07-11 19:53:33
 * @Last Modified by:   junjie.le
-* @Last Modified time: 2017-07-12 20:41:04
+* @Last Modified time: 2017-07-13 09:48:49
 */
 *{
 	margin: 0;
@@ -70,7 +70,7 @@ html, body{
 }
 .carousel{
 	width: 100%;
-	min-height: 128px;
+	/*min-height: 128px;*/
 	position: relative;
 	overflow: hidden;
 }
@@ -288,7 +288,7 @@ footer .ft-info{
 footer .ft-statistics{
 	color: #000;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 890px) {
 	.right-nav-info{
 		display: block;
 		text-align: left;
@@ -314,7 +314,7 @@ footer .ft-statistics{
 	.news article {
 		width: 100%;
 		float: none;
-		padding: 0;
+		padding: 0 0 0 20px;
 		text-align: center;
 	}
 	.news article>div{

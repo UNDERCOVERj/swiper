@@ -2,7 +2,7 @@
 * @Author: junjie.le
 * @Date:   2017-07-12 18:03:10
 * @Last Modified by:   junjie.le
-* @Last Modified time: 2017-07-12 20:40:40
+* @Last Modified time: 2017-07-13 09:44:40
 */
 
 'use strict';
@@ -29,7 +29,7 @@ Carousel.prototype = {
     },
     computeBodyWidth() {//计算窗口宽度
         if(document.body) {
-            return document.body.clientWidth;
+            return document.body.clientWidth
         }else {
 
             return document.documentElement.clientWidth;
@@ -39,11 +39,13 @@ Carousel.prototype = {
         return this.img.offsetHeight;
     },
     init() {
-        clearInterval(this.timer);
+        var imgWidth = this.img.offsetWidth,
+            imgHeight = this.img.offsetHeight;
+        this.wrapper.style.height = this.bodyWidth*imgHeight/imgWidth + 'px';
         this.imgs.forEach((img) => {
             img.style.width = this.bodyWidth + 'px'//初始化图片大小
         });
-        this.wrapper.style.height = this.computeImgHeight() + 'px';//设置包裹层高度
+        //this.wrapper.style.height = this.computeImgHeight() + 'px';//设置包裹层高度
         this.wrapperContent.style.width = this.bodyWidth*(this.count + 2) + 'px';//设置wrapperContent的宽度
         this.wrapperContent.classList.remove('carousel-content-wrapper-transition');//imp
         this.wrapperContent.style.left = -this.curPage*this.bodyWidth +'px';
@@ -107,7 +109,7 @@ Carousel.prototype = {
         this.timer = setInterval(this.nextAction.bind(this), 2000);
     },
     setOpenBtn() {
-        if(this.bodyWidth < 650) {
+        if(this.bodyWidth < 890) {
             this.nav.style.display = 'none';
             this.open.innerHTML = '+';
             this.open.style.display = 'block';
@@ -182,4 +184,5 @@ Carousel.prototype = {
         }
     }
 }
+
 var carousel = new Carousel(3)
