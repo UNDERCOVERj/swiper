@@ -2,7 +2,7 @@
 * @Author: junjie.le
 * @Date:   2017-07-12 18:03:10
 * @Last Modified by:   junjie.le
-* @Last Modified time: 2017-07-13 12:20:23
+* @Last Modified time: 2017-07-13 12:27:27
 */
 
 'use strict';
@@ -14,7 +14,7 @@ function Carousel(count) {
     this.bodyWidth = this.computeBodyWidth();
     this.open = document.querySelector('.open');
     this.nav = document.querySelector('.right-nav');
-    this.img = document.querySelector('.carousel-img');
+    this.img = document.querySelectorAll('.carousel-img')[1];
     this.imgs = document.querySelectorAll('.carousel-img');
     this.wrapper = document.querySelector('.carousel');
     this.wrapperContent = document.querySelector('.carousel-content-wrapper')
@@ -184,10 +184,8 @@ Carousel.prototype = {
         }
     }
 }
-
-
-var srcArr = [
-    "./img/zhuanchenew3.jpg",
+/*var srcArr = [
+    "./img/chuzuchenew1.jpg",
     "./img/shunfengche2.jpg",
     "./img/zhuanchenew3.jpg"
 ],pArr = [];
@@ -202,4 +200,7 @@ Promise.all(pArr).then(() => {
     document.querySelector('.carousel-show').style.display = 'none';
     document.querySelector('.carousel').style.display = 'block';
     var carousel = new Carousel(3);
-})
+})*/
+//document.querySelector('.carousel-show').style.display = 'none';
+    //document.querySelector('.carousel').style.display = 'block';
+    var carousel = new Carousel(3);
